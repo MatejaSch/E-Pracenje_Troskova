@@ -1,0 +1,87 @@
+@import "main.css";
+
+/*==========
+    MAIN
+==========*/
+.main {
+    width: 100vw;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+/*=========
+   welcome
+=========*/
+.welcome {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+/*========
+   CARDS extension for this page specific
+=========*/
+
+.loginCard, .aboutCard {
+    width: 100%;
+    max-width: 560px;
+}
+
+/* LOGIN/REGISTER FORMS */
+
+.formBtn>a {
+    display: inline-block;
+    padding: 15px 0 10px 0;
+    font-size: 1.3rem;
+    border: none;
+}
+.formBtn {
+    background-color: #e9e9e9;
+    border: 1px solid #d7d7d7;
+}
+.formBtn-active {
+    background-color: #fff;
+    border: none;
+}
+
+.formBtn:hover{
+    cursor: pointer;
+}
+
+.underline, .formBtn-active>a {
+    border-bottom: 3px solid #2da14e;
+}
+
+hr{
+    border-top: none;
+}
+
+#formRegister, #formLogin {
+    display: none;
+}
+.form-active {
+    display: block !important;
+}
+
+.activeModal{
+    display: flex;
+}
+
+/*===================================
+     MODAL (rest is in main.css)
+         RESEND / FORGOT
+ ===================================*/
+
+
+#resend, #forgot{
+    color: #007bff;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+
+#changePWForm>*>:nth-child(4){
+    margin-top: 20px;
+}

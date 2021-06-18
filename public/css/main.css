@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+}
+
+/*=========
+    CARD
+===========*/
+.card {
+    margin:1rem;
+    font-family: Lato, sans-serif;
+    font-size: 1.125rem;
+    border: 1px solid #d7d7d7;
+    color: #494949;
+}
+.card-title {
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    color: #494949;
+}
+.card-image { margin: 0.6rem; }
+
+/*========
+   FORMS
+=========*/
+.form-control {
+    background-color: #f9f9f9;
+}
+
+/* ==============
+    MESSAGES
+ ============== */
+
+.errorMessage, .successMessage, .infoMessage {
+    width: 200px;
+    height: 140px;
+    background-color: rgba(201, 16, 16, 0.8);
+    color: #fff;
+    z-index: 2000;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 16px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    display: none;
+}
+
+.successMessage {
+    background-color: rgba(54, 126, 23, 0.8);
+}
+
+.infoMessage{
+    background-color: rgb(1, 126, 162);
+}
+
+
+/* =============
+      MODAL
+===============*/
+.activeMessage, .activeModal{
+    display: flex !important;
+}
+
+.modal{
+    background-color: rgba(0, 0, 0, 0.6);
+    align-items: center;
+    justify-content: center;
+}
+.modalCard{
+    padding: 30px;
+}
+/* mozda napraviti generalnu klasu za ikonice gde ce sve imatti ovaj width */
+.iconClose{
+    width: 16px;
+    opacity: 80%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+

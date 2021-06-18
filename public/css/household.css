@@ -1,0 +1,410 @@
+@import "main.css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+
+body{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/*========
+    NAV
+========*/
+
+nav {
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    align-items: center;
+    height: 90px;
+    font-family: Lato, sans-serif;
+    font-size: 1.1rem;
+    width: 100%;
+    max-width: 1400px;
+    z-index: 1000;
+    background-color: #f8f8f8;
+}
+nav>* {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav>:first-child {
+    display: none;
+}
+nav>:first-child>:not(:first-child) {
+    margin-right: auto;
+}
+
+nav>:last-child>* {
+    margin-left: auto;
+}
+
+nav>:last-child{
+    display: inline-flex;
+    flex-direction: column;
+    align-self: flex-start;
+}
+
+.user>div{
+    display: none;
+}
+
+.navIcons {
+    padding: 0.6rem;
+    cursor: pointer;
+}
+
+.brand {
+     flex: 1;
+     align-self: flex-start;
+     padding: 0.4rem 0.8rem;
+     font-family: Montserrat, sans-serif;
+     font-size: 1.6rem;
+     font-weight: 600;
+     letter-spacing: 2px;
+     text-align: left;
+ }
+
+.collapse-menu{
+    display: none;
+    margin-left: 0;
+    z-index: 998;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+.collapse-menu>:first-child{
+    list-style-type: none;
+    margin:0;
+    margin-right: 8px;
+    padding:0;
+    display:block;
+}
+.collapse-menu>:first-child>*{
+    padding: 7px 10px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+.collapse-menu>:first-child>*>:first-child{
+    padding-right: 7px;
+}
+.collapse-menu>:first-child>:not(:first-child){
+    border-top: 1px solid #9d9d9d;
+}
+.collapse-menu>:first-child{
+    border: 1px solid #9d9d9d;
+    border-top: none;
+}
+.collapse-menu>:first-child>*:hover{
+    background-color: #ffffff;
+}
+.collapse-menu>:first-child>*>*{
+    text-decoration:none;
+    color: #494949;
+}
+
+
+/*==========
+    MAIN
+==========*/
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+/*===============
+    HOUSEHOLDS
+===============*/
+.households {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.gridDefault{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+
+.grid-item{
+    padding: 10px 20px;
+}
+
+
+/*=========
+    CARDS
+==========*/
+.card{
+    margin: 0;
+    text-align: center;
+}
+
+.card-household {
+    width: 100%;
+    max-height: 300px;
+    max-width: 300px;
+    min-height: 250px;
+    min-width: 260px;
+    height: 100%;
+}
+.card-household > .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.card-household .card-title{
+    font-family: Lato, sans-serif;
+    font-weight: normal;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.addIcon{
+    cursor: pointer;
+}
+.addIcon:hover{
+    transform: scale(1.2);
+    transition: ease-in 100ms;
+}
+.flex{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.flex>*{
+    margin:10px;
+}
+
+.exists{
+    cursor: pointer;
+}
+.exists:hover{
+    -webkit-box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.8);
+    box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.3);
+}
+.cost, .wish{
+    margin: 5px 10px;
+    max-height: 1000px;
+    font-size: 1rem;
+}
+.costs{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.info, .filters{
+    flex: 1;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+    font-size: 1.2rem;
+}
+.costRow, .wishRow{
+    padding-top: 12px;
+}
+
+.household-id{
+    display:none;
+}
+
+.householdNameTitle{
+    font-size: 40px;
+    font-family: Lato, sans-serif;
+    font-weight: 400;
+    color: #494949;
+    align-self: flex-start;
+    padding-left: 20px;
+}
+
+.del{
+    display: block;
+    content: '';
+    height: 1px;
+    width: 100%;
+    background: #494949;
+    margin-bottom: 10px;
+}
+
+.newCat{
+    display: flex;
+    align-items: center;
+}
+.newCat>:last-child{
+    cursor: pointer;
+    display:block;
+    margin-left: 5px;
+}
+
+.grid-item-wish{
+    margin: 20px;
+}
+
+.iconClose{
+    width: 16px;
+    opacity: 80%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* ========================
+      HOUSEHOLD ADMIN
+ ========================*/
+
+.users{
+    align-self: flex-start;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.users>*{
+
+    padding: 5px;
+}
+.usersTitle{
+    text-align:left;
+    padding: 20px;
+}
+.btn-light{
+    border: 2px #bfbfbf solid;
+}
+.removeUser{
+    cursor: pointer;
+}
+
+.addCat, .deleteCat{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.addCat>:last-child, .deleteCat>:last-child{
+    cursor: pointer;
+    padding-left: 20px;
+}
+#errorAddCat, #errorDeleteCat{
+    color: red;
+}
+.errorCategory{
+    border-color: red;
+}
+
+#question{
+    padding-top: 15px;
+}
+
+.modalCard{
+    padding: 0;
+    margin: 10px;
+    max-width: 400px;
+}
+#cancel, #accept{
+    margin: 5px;
+}
+
+.editName{
+    cursor: pointer;
+    padding-left: 15px;
+}
+
+
+@media(min-width: 448px){
+    nav{
+        height: 50px;
+    }
+}
+
+
+@media(min-width: 750px){
+    /*========
+      GRID
+   ========*/
+    .gridDefault{
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    .grid{
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+}
+
+
+@media(min-width: 900px){
+    /*========
+        NAV
+    ========*/
+    nav>* {
+        flex:1;
+        justify-content: center;
+    }
+    nav>:first-child {
+        display: flex;
+    }
+
+    .user{
+        display: flex;
+        align-items: center;
+        font-family: Lato, sans-serif;
+        font-size: 18px;
+    }
+
+    .navIcons {
+        padding: 0.4rem;
+        margin: 0 0.5rem;
+    }
+
+    .brand {
+        flex: 2;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+}
+
+
+@media(min-width: 1215px){
+    /*========
+        NAV
+    ========*/
+    .user>div{
+        display: flex;
+    }
+
+    /*========
+       GRID
+    ========*/
+    .grid{
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+    }
+
+}
+

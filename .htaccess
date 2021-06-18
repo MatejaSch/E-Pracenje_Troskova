@@ -1,0 +1,5 @@
+Options -Indexes
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ http://localhost/E_pracenje_troskova/$1 [L,R=301]

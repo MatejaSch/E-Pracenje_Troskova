@@ -1,0 +1,156 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.title{
+    height: 100px;
+    padding-top: 10px;
+    font-family: Lato, sans-serif;
+    font-weight: bold;
+    color: #007bff;
+}
+.main{
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 1400px;
+    max-height: 1000px;
+    overflow: auto;
+
+}
+
+.filters{
+    align-self: center;
+    margin: 30px;
+}
+.filters>:first-child{
+    padding-right: 10px;
+}
+
+.household-users{
+    padding: 10px;
+    margin: 20px;
+    background-color: #fcfcfc;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.8);
+    box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.3);
+}
+.household-name{
+    font-size: 20px;
+    font-weight: 600;
+}
+.household>:not(:first-child){
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: auto;
+}
+.household>:first-child{
+    display: flex;
+    justify-content: space-around;
+
+}
+.household>:first-child>*{
+    padding:10px;
+
+}
+
+.user{
+    display: flex;
+    align-items: center;
+    border: 1px solid #b0b0b0;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.user>*{
+    padding: 10px 30px;
+}
+.user>*>:first-child{
+    padding-right: 10px;
+}
+.user>.btn{
+    margin:10px;
+}
+.modal{
+    background-color: rgba(0, 0, 0, 0.6);
+    align-items: center;
+    justify-content: center;
+}
+.modalCard{
+    padding: 30px;
+}
+.activeModal{
+    display: flex;
+}
+.iconClose:hover{
+    cursor: pointer;
+}
+.iconClose{
+    width: 16px;
+    opacity: 80%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+.form-control{
+    width:350px;
+}
+.successMessage{
+    width: 200px;
+    height: 140px;
+    background-color: rgba(54, 126, 23, 0.8);
+    color: #fff;
+    z-index: 999;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 16px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    display: none;
+}
+.activeMessage{
+    display: flex;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+#logHistoryBlock{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#logHistoryBlock tbody tr:nth-child(odd) {
+    background-color: #f1f0f0;
+}
+
+#logHistoryBlock th{
+    vertical-align: center;
+}
+
