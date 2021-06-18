@@ -28,16 +28,22 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
     $stmt = $conn->prepare("SELECT sum(cost_price) as ukupno FROM cost WHERE id_household = :householdID GROUP BY id_household");
     $stmt->bindParam(":householdID", $_SESSION['current_household']);
     $stmt->execute();
-    $result = $stmt->fetch();
-    $sum = $result->ukupno;
+    if($stmt->rowCount() === 1){
+        $result = $stmt->fetch();
+        $sum = $result->ukupno;
+    }
+
 
     $stmt = $conn->prepare("SELECT sum(cost_price) as ukupno FROM cost WHERE id_household = :householdID AND MONTH(cost_creating_date) = :thisMonth AND YEAR(cost_creating_date) = :thisYear GROUP BY id_household, MONTH(cost_creating_date)");
     $stmt->bindParam(":householdID", $_SESSION['current_household']);
     $stmt->bindParam(":thisMonth", $thisMonth);
     $stmt->bindParam(":thisYear", $thisYear);
     $stmt->execute();
-    $result = $stmt->fetch();
-    $sumForMonth = $result->ukupno;
+    if($stmt->rowCount() === 1){
+        $result = $stmt->fetch();
+        $sumForMonth = $result->ukupno;
+    }
+
 
     $data = ["sum"=>$sum, "thisMonth"=>$sumForMonth];
 

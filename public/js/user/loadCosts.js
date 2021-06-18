@@ -1,7 +1,10 @@
-function loadCosts(){
+function loadCosts(value= "0"){
     const gridCosts = document.querySelectorAll(".grid-costs")[0];
+   let formData= new FormData();
+   formData.append('costSelectValue',value);
     fetch('loadCosts.php', {
-        method: 'POST'
+        method: 'POST',
+        body:formData
     })
         .then(response => response.json())
         .then(data => {
@@ -29,6 +32,9 @@ function loadCosts(){
             return false;
         });
 }
+
+let costSelect = document.getElementById('filterCat');
+costSelect.addEventListener('change',(e)=> loadCosts(e.target.value));
 
 function deleteCost(id_cost){
     let formData = new FormData();

@@ -155,8 +155,10 @@ require_once "includes/modalChangeHouseholdName.php";
             SORTIRAJ:
             <select id="filterCat">
                 <option value="0">IZABERI</option>
-                <option value="catName">NAZIV KATEGORIJE</option>
-                <option value="costValue">TROSAK</option>
+                <option value="catName">NAZIV KATEGORIJE a-z</option>
+                <option value="catNameD">NAZIV KATEGORIJE z-a</option>
+                <option value="costValue">TROSAK rastući</option>
+                <option value="costValueD">TROSAK opadajući</option>
             </select>
         </div>
     </div>
